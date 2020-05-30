@@ -6,6 +6,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,6 +22,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity
     ProgressBar progressBar;
     TextView tvSignIn;
     FirebaseAuth mFirebaseAuth;
+    int FLAG=1;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
 
 
@@ -54,17 +57,21 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth)
             {
-                FirebaseUser mFirebaseUser = mFirebaseAuth.getCurrentUser();
-                if( mFirebaseUser != null )
-                {
-                    Toast.makeText(MainActivity.this,"You are logged in",Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(MainActivity.this, HomeActivity.class);
-                    startActivity(i);
+                if(FLAG==1){
+                    FirebaseUser mFirebaseUser = mFirebaseAuth.getCurrentUser();
+                    if( mFirebaseUser != null )
+                    {
+
+                        Intent i = new Intent(MainActivity.this, EmailVerificationActivity.class);
+                        startActivity(i);
+                        MainActivity.this.finish();
+                    }
+                    else
+                    {
+                        Toast.makeText(MainActivity.this,"Please Register",Toast.LENGTH_SHORT).show();
+                    }
                 }
-                else
-                {
-                    Toast.makeText(MainActivity.this,"Please Register",Toast.LENGTH_SHORT).show();
-                }
+
             }
         };
 
@@ -75,21 +82,27 @@ public class MainActivity extends AppCompatActivity
             {
                 final String email = emailId.getText().toString();
                 String pwd = password.getText().toString();
-                if(email.isEmpty())
-                {
-                    emailId.setError("Please enter email id");
+                if(email.isEmpty()){
+                    emailId.setError("Please enter a email id");
                     emailId.requestFocus();
                 }
-                else  if(pwd.isEmpty())
-                {
-                    password.setError("Please enter your password");
+                else if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+                    emailId.setError("Please enter a valid email id");
+                    emailId.requestFocus();
+                }
+                else  if(pwd.isEmpty()){
+                    password.setError("Please enter a password");
+                    password.requestFocus();
+                }
+                else if(pwd.length()<6){
+                    password.setError("Please enter a 6+ char password");
                     password.requestFocus();
                 }
                 else  if(email.isEmpty() && pwd.isEmpty())
                 {
-                    Toast.makeText(MainActivity.this,"Fields Are Empty!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this,"Fields Are Empty!",Toast.LENGTH_SHORT).show();
                 }
-                else  if(!(email.isEmpty() && pwd.isEmpty()))
+                else
                 {
                     progressBar.setVisibility(View.VISIBLE);
                     mFirebaseAuth.createUserWithEmailAndPassword(email, pwd).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>()
@@ -100,21 +113,23 @@ public class MainActivity extends AppCompatActivity
                             progressBar.setVisibility(View.INVISIBLE);
                             if(!task.isSuccessful())
                             {
-                                Toast.makeText(MainActivity.this,"Registration Unsuccessful, Please Try Again",Toast.LENGTH_SHORT).show();
+                                if (task.getException() instanceof FirebaseAuthUserCollisionException){
+                                    Toast.makeText(MainActivity.this,"User already exists,Please Login",Toast.LENGTH_SHORT).show();
+                                }
+                                else{
+                                    Toast.makeText(MainActivity.this,"Registration Unsuccessful, Please Try Again",Toast.LENGTH_SHORT).show();
+                                }
                             }
                             else
                             {
-
                                 //Toast.makeText(MainActivity.this,"Please wait. This might take a minute",Toast.LENGTH_SHORT).show();
-                                Intent i =new Intent(MainActivity.this,HomeActivity.class);
+                                FLAG=0;
+                                Intent i =new Intent(MainActivity.this,EmailVerificationActivity.class);
                                 startActivity(i);
+                                MainActivity.this.finish();
                             }
                         }
                     });
-                }
-                else
-                {
-                    Toast.makeText(MainActivity.this,"Error Occurred!",Toast.LENGTH_SHORT).show();
                 }
             }
         });

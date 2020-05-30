@@ -400,6 +400,7 @@ public class HomeActivity extends AppCompatActivity
                         FirebaseAuth.getInstance().signOut();
                         Intent intToMain = new Intent(HomeActivity.this, MainActivity.class);
                         startActivity(intToMain);
+                        HomeActivity.this.finish();
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener()

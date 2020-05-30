@@ -214,14 +214,13 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="85"
-                        android:text="Members cannot be removed once the event has been successfully updated."
-                        android:textColor="@android:color/darker_gray"
+                        android:gravity="center_vertical"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
-                        android:gravity="center_vertical"
+                        android:text="Members cannot be removed once the event has been successfully updated."
+                        android:textColor="@android:color/darker_gray"
                         android:textSize="14dp"
-                        android:textStyle="italic"
-                        />
+                        android:textStyle="italic" />
 
                 </LinearLayout>
 

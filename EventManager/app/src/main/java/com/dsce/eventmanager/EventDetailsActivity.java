@@ -241,16 +241,16 @@ public class EventDetailsActivity extends AppCompatActivity
                                                 checkBox.setChecked(true);
                                                 checkBox.setEnabled(false);
                                             }
+
+                                            if(userList.get(i).contentEquals(Admin)){
+                                                checkBox.setChecked(true);
+                                                checkBox.setEnabled(false);
+                                            }
                                             checkboxList.addView(checkBox);
-                                            String a,b;
+                                            //Toast.makeText(EventDetailsActivity.this,Admin,Toast.LENGTH_SHORT).show();
+
                                             for(int k=0;k<members.size();k++)
                                             {
-                                                a = members.get(k);
-                                                b = userList.get(i);
-
-                                                Log.i("Member",a);
-                                                Log.i("User list",b);
-                                                Log.i("Equality:",Boolean.toString(a.contentEquals(b)));
                                                 //checks users who are already part of the event
                                                 if(members.get(k).contentEquals(userList.get(i)))
                                                 {

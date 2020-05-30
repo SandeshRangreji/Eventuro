@@ -194,33 +194,7 @@ public class AddEvent extends AppCompatActivity
                             }
                         });
                     }
-                    //handles select all checkbox
-                    selectAll=new CheckBox(getApplicationContext());
-                    selectAll.setText("Select all");
-                    selectAll.setTextColor(Color.rgb(255, 255, 255));
-                    selectAll.setButtonTintList(ColorStateList.valueOf(Color.rgb(51, 181, 229)));
-                    checkboxList.addView(selectAll);
-                    selectAll.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
-                    {
-                        @Override
-                        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
-                        {
-                            if(isChecked)
-                            {
-                                for(int i=0;i<userList.size();i++)
-                                {
-                                    checkBoxListArray[i].setChecked(true);
-                                }
-                            }
-                            else if(!isChecked)
-                            {
-                                for(int i=0;i<userList.size();i++)
-                                {
-                                    checkBoxListArray[i].setChecked(false);
-                                }
-                            }
-                        }
-                    });
+
                 }
             }
         }).addOnFailureListener(new OnFailureListener()

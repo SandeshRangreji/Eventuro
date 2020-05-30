@@ -59,6 +59,7 @@
                     android:layout_marginTop="-2dp"
                     android:padding="10dp"
                     android:hint="Email"
+                    android:inputType="textEmailAddress"
                     android:radius="15dp"
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="#bbbbbb"
@@ -86,11 +87,20 @@
                     android:textAlignment="center"
                     android:textColor="@android:color/darker_gray"
                     android:paddingTop="10dp"
-                    android:paddingBottom="50dp"
+                    android:paddingBottom="20dp"
                     android:textSize="11dp"
                     android:textStyle="italic"
                     />
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Forgot Password?"
+                    android:id="@+id/textViewForgotPassword"
+                    android:textAlignment="center"
+                    android:textColor="#ECF0F1"
+                    android:paddingBottom="15dp"
+                    />
 
                 <Button
                     android:id="@+id/buttonLogin"
