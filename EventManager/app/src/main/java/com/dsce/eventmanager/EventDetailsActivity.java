@@ -539,47 +539,6 @@ public class EventDetailsActivity extends AppCompatActivity
                                         }
                                     });
 
-                            /*for(int i=0;i<members.size();i++)
-                            {
-
-                                deleteMember=members.get(i);
-
-                                userRef.document(members.get(i)).collection("Events")
-                                        .whereEqualTo("title",Title)
-                                        .whereEqualTo("time",Time)
-                                        .whereEqualTo("duration",Duration)
-                                        .whereEqualTo("location",Location)
-                                        .whereEqualTo("eventDetails",EventDetails)
-                                        .whereEqualTo("date",Date)
-                                        .get()
-                                        .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>()
-                                        {
-                                            @Override
-                                            public void onSuccess(QuerySnapshot queryDocumentSnapshots)
-                                            {
-                                                if(!queryDocumentSnapshots.isEmpty())
-                                                {
-
-                                                    //Toast.makeText(EventDetailsActivity.this,"Not Screwed",Toast.LENGTH_SHORT).show();
-                                                    List <DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
-                                                    for(DocumentSnapshot d:list)
-                                                    {
-                                                        //Event event = d.toObject(Event.class);
-                                                        ID = d.getId();
-
-                                                        //Toast.makeText(EventDetailsActivity.this,"set....not added\n"+d.getId()+"\n"+ID,Toast.LENGTH_SHORT).show();
-                                                    }
-
-                                                    userRef.document(deleteMember).collection("Events").document(ID).delete();
-
-                                                }
-
-                                            }
-                                        });
-
-
-                            }*/
-
                         }
                     });
 
@@ -795,43 +754,6 @@ public class EventDetailsActivity extends AppCompatActivity
                                                                                     updateSharedEvents(members.get(k),updatedEvent);
                                                                                 }
 
-
-                                                                                /*
-                                                                                for(int i=0;i<members.size();i++)
-                                                                                {
-
-                                                                                    updateMember=members.get(i);
-
-                                                                                    userRef.document(members.get(i)).collection("Events")
-                                                                                            .whereEqualTo("title",Title)
-                                                                                            .whereEqualTo("time",Time)
-                                                                                            .whereEqualTo("duration",Duration)
-                                                                                            .whereEqualTo("location",Location)
-                                                                                            .whereEqualTo("eventDetails",EventDetails)
-                                                                                            .whereEqualTo("date",Date)
-                                                                                            .get()
-                                                                                            .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>()
-                                                                                            {
-                                                                                                @Override
-                                                                                                public void onSuccess(QuerySnapshot queryDocumentSnapshots)
-                                                                                                {
-                                                                                                    if(!queryDocumentSnapshots.isEmpty())
-                                                                                                    {
-
-                                                                                                        List <DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
-                                                                                                        for(DocumentSnapshot d:list)
-                                                                                                        {
-                                                                                                            ID = d.getId();
-                                                                                                        }
-
-                                                                                                        userRef.document(updateMember).collection("Events").document(ID).set(updatedEvent);
-
-                                                                                                    }
-
-                                                                                                }
-                                                                                            });
-                                                                                }*/
-
                                                                                 Toast.makeText(EventDetailsActivity.this,"Event Updated.",Toast.LENGTH_SHORT).show();
                                                                                 //Returns to Home page on completion
                                                                                 Intent i =new Intent(EventDetailsActivity.this,HomeActivity.class);
@@ -894,39 +816,7 @@ public class EventDetailsActivity extends AppCompatActivity
                                                 {
                                                     updateSharedEvents(members.get(k), updatedEvent);
                                                 }
-                                                /*for(int i=0;i<members.size();i++)
-                                                {
 
-                                                    updateMember=members.get(i);
-
-                                                    userRef.document(members.get(i)).collection("Events")
-                                                            .whereEqualTo("title",Title)
-                                                            .whereEqualTo("time",Time)
-                                                            .whereEqualTo("duration",Duration)
-                                                            .whereEqualTo("location",Location)
-                                                            .whereEqualTo("eventDetails",EventDetails)
-                                                            .whereEqualTo("date",Date)
-                                                            .get()
-                                                            .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>()
-                                                            {
-                                                                @Override
-                                                                public void onSuccess(QuerySnapshot queryDocumentSnapshots)
-                                                                {
-                                                                    if(!queryDocumentSnapshots.isEmpty())
-                                                                    {
-                                                                        List <DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
-                                                                        for(DocumentSnapshot d:list)
-                                                                        {
-                                                                            ID = d.getId();
-                                                                        }
-
-                                                                        userRef.document(updateMember).collection("Events").document(ID).set(updatedEvent);
-
-                                                                    }
-
-                                                                }
-                                                            });
-                                                }*/
                                                 Toast.makeText(EventDetailsActivity.this,"Event Updated.",Toast.LENGTH_SHORT).show();
                                                 progressBar.setVisibility(View.INVISIBLE);          //Shows updation has been completed
                                                 //Returns to Home page after deletion
