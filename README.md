@@ -1,10 +1,10 @@
 # Eventuro
 
-## _Just another event scheduler_
-
 ![Banner](https://raw.githubusercontent.com/SandeshRangreji/Eventuro/master/UI-Screenshots/Eventuro-gitHub.png)
 ****
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/SandeshRangreji/Eventuro?include_prereleases)  ![GitHub](https://img.shields.io/github/license/SandeshRangreji/Eventuro)   ![GitHub last commit](https://img.shields.io/github/last-commit/SandeshRangreji/Eventuro) ![GitHub issues](https://img.shields.io/github/issues-raw/SandeshRangreji/Eventuro)
+
+## **Eventuro** - _Just another event scheduler_
 
 **Eventuro** is an event scheduling app, which enables users to keep track of their events or tasks.
 > Why do we need a scheduling app?
@@ -30,7 +30,7 @@ People tend to plan a huge number of tasks or meetings to finish their work. But
 Here is a little guide to navigate through the details of the project:
 
 - [Eventuro](#eventuro)
-  - [_Just another event scheduler_](#just-another-event-scheduler)
+  - [**Eventuro** - _Just another event scheduler_](#eventuro---just-another-event-scheduler)
   - [Eventuro's features](#eventuros-features)
   - [Table of contents](#table-of-contents)
   - [Technologies used](#technologies-used)
