@@ -30,7 +30,7 @@ People tend to plan a huge number of tasks or meetings to finish their work. But
 Here is a little guide to navigate through the details of the project:
 
 - [Eventuro](#eventuro)
-  - [**Eventuro** - _Just another event scheduler_](#eventuro---just-another-event-scheduler)
+  - [Introduction](#eventuro---just-another-event-scheduler)
   - [Eventuro's features](#eventuros-features)
   - [Table of contents](#table-of-contents)
   - [Technologies used](#technologies-used)
