@@ -115,14 +115,13 @@ Apart from these examples, following operations can be performed:
 
 ## Contributors
 
-    > ### Collaborators
-  >- > ![Eakanath-Raparla-icon](https://avatars.githubusercontent.com/u/49331381 =64x64)
-  > [Eakanath Raparla](https://github.com/Eakanath1)
-  > - >![Sandesh-Rangreji-icon](https://avatars.githubusercontent.com/u/46822643 =64x64)
-  >  [Sandesh S Rangreji](https://github.com/SandeshRangreji)
-  > - >![Shiva-Nikhil-icon](https://avatars.githubusercontent.com/u/65167128 =64x64) 
-  > [Shiva Nikhil G](https://github.com/ShivaNikhil10)
+### Collaborators
+> <img src="https://avatars.githubusercontent.com/u/49331381" width="64"/> <figcaption>[Eakanath Raparla](https://github.com/Eakanath1)</figcaption>
+
+ > <img src="https://avatars.githubusercontent.com/u/46822643" width="64"/> <figcaption>[Sandesh S Rangreji](https://github.com/SandeshRangreji)</figcaption>
+ 
+> <img src="https://avatars.githubusercontent.com/u/65167128" width="64"/><figcaption>[Shiva Nikhil G](https://github.com/ShivaNikhil10)</figcaption>
 
 ## License
 
-- >[MIT Opensource License](https://opensource.org/licenses/MIT)
+>[MIT Opensource License](https://opensource.org/licenses/MIT)
