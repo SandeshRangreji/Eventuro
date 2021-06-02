@@ -84,21 +84,27 @@ Eventuro can be installed as a .apk file from this page.
 
 Eventuro app has a secure login and signup system using firebase-auth. Once logged, a whole new experience is unveiled to the user. Below screenshots help in demonstrating the usage of Eventuro.
 >![SplashScreen-UI](https://raw.githubusercontent.com/SandeshRangreji/Eventuro/master/UI-Screenshots/SplashScreen-UI.png)
+
 *Eventuro Splash Screen*
 
 >![Login-UI](https://raw.githubusercontent.com/SandeshRangreji/Eventuro/master/UI-Screenshots/Login-UI.png)
+
 *Login Screen*
 
 >![Home-UI](https://raw.githubusercontent.com/SandeshRangreji/Eventuro/master/UI-Screenshots/Home-UI.png)
+
 *Home Screen UI*
 
 >![Calendar-UI](https://raw.githubusercontent.com/SandeshRangreji/Eventuro/master/UI-Screenshots/Calendar-UI.png)
+
 *Calendar UI*
 
 >![AddEvent-UI](https://raw.githubusercontent.com/SandeshRangreji/Eventuro/master/UI-Screenshots/AddEvent-UI.png)
+
 *Event creation*
 
 >![UpdateEvent-UI](https://raw.githubusercontent.com/SandeshRangreji/Eventuro/master/UI-Screenshots/UpdateEvent-UI.png)
+
 *Updating an Event*
 
 Apart from these examples, following operations can be performed:
@@ -109,13 +115,12 @@ Apart from these examples, following operations can be performed:
 
 ## Contributors
 
-  > ### Collaborators
-  >
+    > ### Collaborators
   >- > ![Eakanath-Raparla-icon](https://avatars.githubusercontent.com/u/49331381 =64x64)
   > [Eakanath Raparla](https://github.com/Eakanath1)
   > - >![Sandesh-Rangreji-icon](https://avatars.githubusercontent.com/u/46822643 =64x64)
   >  [Sandesh S Rangreji](https://github.com/SandeshRangreji)
-  > - >![Shiva-Nikhil-icon](https://avatars.githubusercontent.com/u/65167128 =64x64)
+  > - >![Shiva-Nikhil-icon](https://avatars.githubusercontent.com/u/65167128 =64x64) 
   > [Shiva Nikhil G](https://github.com/ShivaNikhil10)
 
 ## License
